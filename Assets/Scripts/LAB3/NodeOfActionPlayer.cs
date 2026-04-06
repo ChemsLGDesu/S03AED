@@ -1,14 +1,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-enum PlayerAction
+public enum PlayerAction
 {
-   mover,
-   atacar,
-   defender
+   Mover,
+   Atacar,
+   Defender
 }
 public class NodeOfActionPlayer 
 {
-    public int life;
+    public PlayerAction accion;
+    public NodeOfActionPlayer next;
+
+    public NodeOfActionPlayer(PlayerAction nuevaAccion)
+    {
+        accion = nuevaAccion;
+        next = null;
+    }
 
 }
